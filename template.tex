@@ -1,0 +1,256 @@
+%\documentclass[journal]{vgtc}                % final (journal style)
+%\documentclass[review,journal]{vgtc}         % review (journal style)
+%\documentclass[widereview]{vgtc}             % wide-spaced review
+\documentclass[preprint,journal]{vgtc}       % preprint (journal style)
+%\documentclass[electronic,journal]{vgtc}     % electronic version, journal
+
+%% Uncomment one of the lines above depending on where your paper is
+%% in the conference process. ``review'' and ``widereview'' are for review
+%% submission, ``preprint'' is for pre-publication, and the final version
+%% doesn't use a specific qualifier. Further, ``electronic'' includes
+%% hyperreferences for more convenient online viewing.
+
+%% Please use one of the ``review'' options in combination with the
+%% assigned online id (see below) ONLY if your paper uses a double blind
+%% review process. Some conferences, like IEEE Vis and InfoVis, have NOT
+%% in the past.
+
+%% Please note that the use of figures other than the optional teaser is not permitted on the first page
+%% of the journal version.  Figures should begin on the second page and be
+%% in CMYK or Grey scale format, otherwise, colour shifting may occur
+%% during the printing process.  Papers submitted with figures other than the optional teaser on the
+%% first page will be refused.
+
+%% These three lines bring in essential packages: ``mathptmx'' for Type 1
+%% typefaces, ``graphicx'' for inclusion of EPS figures. and ``times''
+%% for proper handling of the times font family.
+
+\usepackage{mathptmx}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{float}
+\usepackage[style=ieee,backend=biber,defernumbers=true]{biblatex}
+
+%% We encourage the use of mathptmx for consistent usage of times font
+%% throughout the proceedings. However, if you encounter conflicts
+%% with other math-related packages, you may want to disable it.
+
+%% This turns references into clickable hyperlinks.
+\usepackage[bookmarks,backref=true,linkcolor=black]{hyperref} %,colorlinks
+\hypersetup{
+  pdfauthor = {},
+  pdftitle = {},
+  pdfsubject = {},
+  pdfkeywords = {},
+  colorlinks=true,
+  linkcolor= black,
+  citecolor= black,
+  pageanchor=true,
+  urlcolor = black,
+  plainpages = false,
+  linktocpage
+}
+
+%% If you are submitting a paper to a conference for review with a double
+%% blind reviewing process, please replace the value ``0'' below with your
+%% OnlineID. Otherwise, you may safely leave it at ``0''.
+\onlineid{0}
+
+%% declare the category of your paper, only shown in review mode
+\vgtccategory{Research}
+
+%% allow for this line if you want the electronic option to work properly
+\vgtcinsertpkg
+
+%% In preprint mode you may define your own headline.
+\preprinttext{}%To appear in an IEEE VGTC sponsored conference.}
+
+%% Paper title.
+
+\title{IEEE VIS 2016 Tutorial Proposal}
+
+%% This is how authors are specified in the journal style
+
+%% indicate IEEE Member or Student Member in form indicated below
+\author{Jun Tao, Hanqi Guo, and TBA}
+\authorfooter{
+%% insert punctuation at end of each item
+\item
+ Jun Tao is with University of Notre Dame. E-mail: jtao1@nd.edu.
+\item
+ Hanqi Guo is with Argonne National Laboratory. Email: hguo@anl.gov.
+}
+
+%other entries to be set up for journal
+% \shortauthortitle{Biv \MakeLowercase{\textit{et al.}}: Global Illumination for Fun and Profit}
+%\shortauthortitle{Firstauthor \MakeLowercase{\textit{et al.}}: Paper Title}
+
+%% Abstract section.
+% \abstract{Duis autem vel eum iriure dolor in hendrerit in vulputate
+% velit esse molestie consequat, vel illum dolore eu feugiat nulla
+% facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+% praesent luptatum zzril delenit augue duis dolore te feugait nulla
+% facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+% sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+% aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+% suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem
+% vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+% consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
+% accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+% delenit augue duis dolore te feugait nulla facilisi.
+% } % end of abstract
+
+%% Keywords that describe your work. Will show as 'Index Terms' in journal
+%% please capitalize first letter and insert punctuation after last keyword
+% \keywords{Radiosity, global illumination, constant time}
+
+%% ACM Computing Classification System (CCS). 
+%% See <http://www.acm.org/class/1998/> for details.
+%% The ``\CCScat'' command takes four arguments.
+
+% \CCScatlist{ % not used in journal version
+%  \CCScat{K.6.1}{Management of Computing and Information Systems}%
+% {Project and People Management}{Life Cycle};
+%  \CCScat{K.7.m}{The Computing Profession}{Miscellaneous}{Ethics}
+% }
+
+% %% Uncomment below to include a teaser figure.
+%   \teaser{
+%  \centering
+%  \includegraphics[width=16cm]{CypressView}
+%   \caption{In the Clouds: Vancouver from Cypress Mountain.}
+%   }
+
+%% Uncomment below to disable the manuscript note
+%\renewcommand{\manuscriptnotetxt}{}
+
+%% Copyright space is enabled by default as required by guidelines.
+%% It is disabled by the 'review' option or via the following command:
+% \nocopyrightspace
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% START OF THE PAPER %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\addverticalspace}{\vspace{3mm}}
+
+\bibliography{template}
+\nocite{*}
+
+\DeclareBibliographyCategory{Tao}
+\addtocategory{Tao}{tao14fs,tao14fc,tao13uni,tao16fs,wang16fv}
+
+\DeclareBibliographyCategory{Guo}
+\addtocategory{Guo}{guo13tvcg,guo14tvcg,liu16pvis,guo16tvcg}
+
+
+\DeclareFieldFormat{labelnumberwidth}{}
+\setlength{\biblabelsep}{0pt}
+
+
+\begin{document}
+
+%% The ``\maketitle'' command must be the first command after the
+%% ``\begin{document}'' command. It prepares and prints the title block.
+
+%% the only exception to this rule is the \firstsection command
+
+\maketitle
+
+\section*{TITLE}
+TBD
+
+\section*{DURATION}
+The tutorial is half-day, including 180 miniutes presentation and discussion and 30 miniutes coffee break.
+
+\section*{ORGANIZERS}
+
+\vspace{-0.1in}
+\begin{table}[H]
+\begin{tabular}{ll}
+TBA & \\
+Jun Tao & University of Notre Dame\\
+Hanqi Guo & Argonne National Laboratory
+\end{tabular}
+\end{table}
+
+\section*{ABSTRACT}
+TBA
+
+\section*{LEVEL}
+Intermediate/Advanced.
+
+\section*{PREREQUISITE}
+A general understanding of flow fields and flow visualization, including basic concepts and techniques, such as different kinds of field lines, critical points, and particle tracing, etc.
+
+\section*{AUDIENCE}
+The intended audience includes students, researchers and practitioners who are interested in the recent advances in flow visualization. More details to be added.
+
+
+\section*{IMPORTANCE}
+TBA
+
+\section*{SCHEDULE}
+
+\vspace{-0.1in}
+\begin{table}[H]
+\begin{tabular}{lll}
+Introduction & All & 10 minutes\\
+Talk1 & TBD & 40 minutes\\
+Talk2 & TBD & 40 minutes\\
+Break & -------- & 30 minutes\\
+Talk3 & TBD & 40 minutes\\
+Talk4 & TBD & 40 minutes\\
+Discussion & All & 10 minutes
+\end{tabular}
+\end{table}
+
+\section*{DESCRIPTION}
+The description and outline of each topic are presented as the followings:
+
+\addverticalspace
+
+\noindent\textbf{\textit{Expressive Flow Field Exploration}}\\
+\textbf{Jun Tao}
+\paragraph{Abstract}
+A major task of visualizing steady flow fields is to allow users perceive the flow patterns and locate features of interest. Traditional flow visualization approaches, such as \emph{seed placement} and \emph{streamline selection}, generate an appropriate set of streamlines to describe steady flow fields. However, only limited capabilities are provided to meet specific needs from different users, especially at the streamline segment level. In this talk, I will start from a unified framework that automatically selects best streamlines to display and selects best viewpoint to observe them simultaneously. Then, three interactive techniques will be presented to demonstrate the benefit of interactive exploration, including a graph-based technique to capture the relations among streamlines and spatial regions, a deformation framework to achieve focus+context visualization, and a vocabulary approach to query flow patterns in a textual manner.
+
+\paragraph{Contribution}
+This part of the tutorial focuses on the exploration of steady flow fields. Through the presented techniques, two trends of flow visualization are shown. First, user interactions are highly involved. This allows users to specify, identify and observe their interested patterns/features in a more desired way. Second, features are captured at both coarser and finer levels. Unlike most of the early works that treat each streamline as an entity, more local features residing on segments of streamlines can be compared, matched and discovered as well.
+
+\section*{TUTORIAL NOTES}
+The tutorial notes will consist of the description of the tutorial, copies of the slides for each talk, and an extensive bibliography including specific references used in the tutorial as well as a general selection of relevant references.
+
+\section*{SPEAKERS}
+The background of each speaker is listed in alphabetical order.
+
+\addverticalspace
+
+\noindent \textbf{Hanqi Guo}\\
+\emph{Argonne National Laboratory}
+
+\addverticalspace
+
+Hanqi Guo is a Postdoctral Appointee in the Mathematics and Computer Science Division, Argonne National Laboratory. He received his PhD degree in computer science from Peking University in 2014, and the BS degree in mathematics and applied mathematics from Beijing University of Posts and Telecommunications in 2009. His research interests are mainly on uncertainty visualization, flow visualization, and large-scale scientific data visualization.
+
+\printbibliography[title={Five Relevant Publications},category=Guo]
+
+\noindent \textbf{Jun Tao}\\
+\emph{University of Notre Dame}
+
+\addverticalspace
+
+Jun Tao is currently a postdoctoral researcher at University of Notre Dame. He received a PhD degree in computer science from Michigan Technological University in 2015. His major research interest is scientific visualization, especially on applying information theory, optimization techniques, and topological analysis to flow visualization and multivariate data exploration. He is also interested in graph-based visualization, image collection visualization, and software visualization. He received the Dean’s Award for Outstanding Scholarship and the Finishing Fellowship at Michigan Technological University in 2015, and a Best Paper Award at IS\&T/SPIE VDA 2013.
+
+\printbibliography[title={Five Relevant Publications},category=Tao]
+
+% %% if specified like this the section will be committed in review mode
+% \acknowledgments{
+% The authors wish to thank A, B, C. This work was supported in part by
+% a grant from XYZ.}
+
+% \bibliographystyle{abbrv}
+% %%use following if all content of bibtex file should be shown
+% %\nocite{*}
+% \bibliography{template}
+\end{document}
