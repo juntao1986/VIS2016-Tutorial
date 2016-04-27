@@ -145,9 +145,11 @@
 \DeclareBibliographyCategory{Guo}
 \addtocategory{Guo}{guo13tvcg,guo14tvcg,liu16pvis,guo16tvcg}
 
+\DeclareBibliographyCategory{Weinkauf}
+\addtocategory{Weinkauf}{theisel03b,weinkauf07c,weinkauf10c,weinkauf12a,weinkauf11b,stoeter12}
 
-\DeclareFieldFormat{labelnumberwidth}{}
-\setlength{\biblabelsep}{0pt}
+% \DeclareFieldFormat{labelnumberwidth}{}
+% \setlength{\biblabelsep}{0pt}
 
 
 \begin{document}
@@ -170,10 +172,11 @@ The tutorial is half-day, including 180 miniutes presentation and discussion and
 \vspace{-0.1in}
 \begin{table}[H]
 \begin{tabular}{ll}
-TBA & \\
 Jun Tao & University of Notre Dame\\
 Hanqi Guo & Argonne National Laboratory\\
-Bei Wang & University of Utah
+Tino Weinkauf & KTH Stockholm\\
+Bei Wang & University of Utah\\
+Christoph Garth & University of Kaiserslautern
 \end{tabular}
 \end{table}
 
@@ -199,17 +202,25 @@ TBA
 \begin{table}[H]
 \begin{tabular}{lll}
 Introduction & All & 10 minutes\\
-Talk1 & TBD & 40 minutes\\
-Talk2 & TBD & 40 minutes\\
+Talk1 & TBD & 30 minutes\\
+Talk2 & TBD & 30 minutes\\
+Talk3 & TBD & 30 minutes\\
 Break & -------- & 30 minutes\\
-Talk3 & TBD & 40 minutes\\
-Talk4 & TBD & 40 minutes\\
+Talk4 & TBD & 30 minutes\\
+Talk5 & TBD & 30 minutes\\
 Discussion & All & 10 minutes
 \end{tabular}
 \end{table}
 
 \section*{DESCRIPTION}
 The description and outline of each topic are presented as the followings:
+
+\addverticalspace
+
+\noindent\textbf{\textit{Spatio-temporal Flow Analysis}}\\
+\textbf{Tino Weinkauf}
+\paragraph{Abstract}
+Understanding the processes in time-dependent flows is of crucial importance in many domains. Different methods exist for this purpose. This talk reviews methods that build on a spatio-temporal concept where the temporal dimension is treated on equal footing with the spatial dimensions. This means, a n-dimensional unsteady flow is analyzed as a (n+1)-dimensional steady flow. This has led to a number of powerful analysis and visualization methods in the last decade such as Feature Flow Fields \cite{theisel03b, weinkauf11b}, Swirling Motion Cores \cite{weinkauf07c}, Streak Lines as Tangent Curves \cite{weinkauf10c, weinkauf12a}, and more. The talk will cover the range from theoretical foundations to the applications on real data.
 
 \addverticalspace
 
@@ -236,7 +247,7 @@ The background of each speaker is listed in alphabetical order.
 
 Hanqi Guo is a Postdoctral Appointee in the Mathematics and Computer Science Division, Argonne National Laboratory. He received his PhD degree in computer science from Peking University in 2014, and the BS degree in mathematics and applied mathematics from Beijing University of Posts and Telecommunications in 2009. His research interests are mainly on uncertainty visualization, flow visualization, and large-scale scientific data visualization.
 
-\printbibliography[title={Five Relevant Publications},category=Guo]
+\printbibliography[title={Relevant Publications},category=Guo]
 
 \noindent \textbf{Jun Tao}\\
 \emph{University of Notre Dame}
@@ -245,13 +256,22 @@ Hanqi Guo is a Postdoctral Appointee in the Mathematics and Computer Science Div
 
 Jun Tao is currently a postdoctoral researcher at University of Notre Dame. He received a PhD degree in computer science from Michigan Technological University in 2015. His major research interest is scientific visualization, especially on applying information theory, optimization techniques, and topological analysis to flow visualization and multivariate data exploration. He is also interested in graph-based visualization, image collection visualization, and software visualization. He received the Dean’s Award for Outstanding Scholarship and the Finishing Fellowship at Michigan Technological University in 2015, and a Best Paper Award at IS\&T/SPIE VDA 2013.
 
-\printbibliography[title={Five Relevant Publications},category=Tao]
+\printbibliography[title={Relevant Publications},category=Tao]
 
 \noindent \textbf{Bei Wang}\\
 \emph{University of Utah}
 
 \addverticalspace
 Bei Wang is a Research Computer Scientist at the Scientific Computing and Imaging Institute, University of Utah. She received her Ph.D. in Computer Science from Duke University in 2010. Her main research interests lie in the theoretical, algorithmic, and application aspects of data analysis and data visualization, with a focus on topological techniques. She is also interested in computational biology and bioinformatics, machine learning and data mining. She is a member of ACM and IEEE.
+\addverticalspace
+
+\noindent \textbf{Tino Weinkauf}\\
+\emph{KTH Stockholm}
+
+\addverticalspace
+Tino Weinkauf received his diploma in computer science from the University of Rostock in 2000. From 2001, he worked on feature-based flow visualization and topological data analysis at Zuse Institute Berlin. He received his Ph.D. in computer science from the University of Magdeburg in 2008. In 2009 and 2010, he worked as a postdoc and adjunct assistant professor at the Courant Institute of Mathematical Sciences at New York University. He started his own group in 2011 on Feature-Based Data Analysis in the Max Planck Center for Visual Computing and Communication, Saarbrücken. Since 2015, he holds the Chair of Visualization at KTH Stockholm. His current research interests focus on flow analysis, discrete topological methods, and information visualization.
+
+\printbibliography[title={Relevant Publications},category=Weinkauf]
 
 % %% if specified like this the section will be committed in review mode
 % \acknowledgments{
