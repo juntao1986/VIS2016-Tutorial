@@ -155,6 +155,9 @@
 \DeclareBibliographyCategory{Weinkauf}
 \addtocategory{Weinkauf}{weinkauf07c,weinkauf10c,weinkauf12a,weinkauf11b,stoeter12}
 
+\DeclareBibliographyCategory{Garth}
+\addtocategory{Garth}{agranovsky2015,biedert2015,agranovsky2014,hummel2013,barakat2012}
+
 \DeclareBibliographyCategory{Other}
 \addtocategory{Other}{theisel03b}
 
@@ -172,12 +175,28 @@
 \maketitle
 
 \section*{TITLE}
-TBD
+Recent Advancements of Feature-based Flow Visualization and Analysis.
 
 \section*{DURATION}
-The tutorial is half-day, including 200 miniutes presentation and discussion and 30 miniutes coffee break.
+The tutorial is half-day, including 250 miniutes presentation and discussion and 20 miniutes coffee break.
 
-\section*{ORGANIZERS}
+\section*{SCHEDULE}
+
+\vspace{-0.1in}
+\begin{table}[H]
+\begin{tabular}{lll}
+Introduction & All & 10 minutes\\
+Talk1 & Jun Tao & 40 minutes\\
+Talk2 & Tino Weinkauf & 40 minutes\\
+Talk3 & Bei Wang & 40 minutes\\
+Break & -------- & 20 minutes\\
+Talk4 & Christoph Garth & 40 minutes\\
+Talk5 & Hanqi Guo & 40 minutes\\
+Discussion & All & 20 minutes
+\end{tabular}
+\end{table}
+
+\section*{SPEAKERS}
 
 \vspace{-0.1in}
 \begin{table}[H]
@@ -191,7 +210,9 @@ Tino Weinkauf & KTH Stockholm
 \end{table}
 
 \section*{ABSTRACT}
-TBA
+Flow visualization has been a central topic in scientific visualization for many years, which can be explained by the ubiquity of vector fields in various kinds of scientific, engineering, medical researches. In all these domains, with today's ever-growing computation power, numerical simulations produce large, time-varying and highly complex vector fields. Preserving the rich information in these large and complex vector fields and presenting concise visualizations for clarity are two desired goals, but they are often conflicting. Striking a balance between them is challenging, which requires us to better distinguish the features from the contexts. Understanding and extracting features become critical to obtain insights from the vector fields with growing sizes and complexities.
+
+In this tutorial, we cover different topics centered at the feature-based flow visualization and analysis: (a) interactive techniques that allow users to discover their features of interest; (b) spatio-temporal flow analysis that considers n-dimensional unsteady flows as (n+1)-dimensional steady flows; (c) feature extraction, tracking and simplification with robustness that captures structural stability of the data; (d) vector field techniques for large-scale time-varying data, especially the parallel algorithms and in-situ techniques; and (f) theories and scalability issues in ensemble and uncertain flow. This tutorial aims at providing information of the state-of-the-art techniques for feature-based flow visualization in different aspects, including interactive exploration, large-scale time-varying data, topological robustness and ensemble data.
 
 \section*{LEVEL}
 Intermediate/Advanced.
@@ -199,31 +220,18 @@ Intermediate/Advanced.
 \section*{PREREQUISITE}
 A general understanding of flow fields and flow visualization, including basic concepts and techniques, such as different kinds of field lines, critical points, and particle tracing, etc.
 
-\section*{AUDIENCE}
-The intended audience includes students, researchers and practitioners who are interested in the recent advances in flow visualization. More details to be added.
-
-
-\section*{IMPORTANCE}
-TBA
-
-\section*{SCHEDULE}
-
-\vspace{-0.1in}
-\begin{table}[H]
-\begin{tabular}{lll}
-Introduction & All & 10 minutes\\
-Talk1 & TBD & 30 minutes\\
-Talk2 & TBD & 30 minutes\\
-Talk3 & TBD & 30 minutes\\
-Break & -------- & 30 minutes\\
-Talk4 & TBD & 30 minutes\\
-Talk5 & TBD & 30 minutes\\
-Discussion & All & 10 minutes
-\end{tabular}
-\end{table}
+% \section*{AUDIENCE}
+% The intended audience includes students, researchers and practitioners who are interested in the recent advances in flow visualization. More details to be added.
 
 \section*{DESCRIPTION}
 The description and outline of each topic are presented as the followings:
+
+\addverticalspace
+
+\noindent\textbf{\textit{Expressive Flow Field Exploration}}\\
+\textbf{Jun Tao}
+\paragraph{Abstract}
+A major task of visualizing steady flow fields is to allow users perceive the flow patterns and locate features of interest. Traditional flow visualization approaches, such as seed placement and streamline selection, generate an appropriate set of streamlines to describe steady flow fields. However, only limited capabilities are provided to meet specific needs from different users, especially at the streamline segment level. In this talk, we will start from an automatic streamline and viewpoint selection framework, and then introduce three interactive exploration approaches. We demonstrate that the transition from the automatic approaches to the interactive ones provides more flexibility that allows users to specify, identify and observe their interested patterns/features in a more desired way.
 
 \addverticalspace
 
@@ -234,21 +242,24 @@ Understanding the processes in time-dependent flows is of crucial importance in 
 
 \addverticalspace
 
-\noindent\textbf{\textit{Feature Extraction, Feature Tracking and Feature Simplification with Robustness}}\\
+\noindent\textbf{\textit{Flow Analysis with Robustness}}\\
 \textbf{Bei Wang}
 \paragraph{Abstract}
-This talk will review topological approaches for flow visualization. In particular, we will discuss a recent line of research that spans feature extraction, feature tracking, and feature simplification of vector fields based upon the topological notion of robustness that captures structural stability of the data. Robustness, a concept similar to persistent homology, quantifies the stability of critical points with respect to the minimum amount of
-perturbation in the fields required to remove them. We will discuss how this line of work can potentially increase the interpretability of data, specifically, by giving a coherent and multi-scale view of the flow dynamics under both stationary and time-varying settings. We will demonstrate how robustness-based approaches are independent of the topological skeleton and are scalable to large-scale datasets.
+This talk will review topological approaches for flow visualization. In particular, we will discuss a recent line of research that spans feature extraction, feature tracking, and feature simplification of vector fields based upon the topological notion of robustness that captures structural stability of the data. Robustness, a concept similar to persistent homology, quantifies the stability of critical points with respect to the minimum amount of perturbation in the fields required to remove them. We will discuss how this line of work can potentially increase the interpretability of data, specifically, by giving a coherent and multi-scale view of the flow dynamics under both stationary and time-varying settings. We will demonstrate how robustness-based approaches are independent of the topological skeleton and are scalable to large-scale datasets.
 
 \addverticalspace
 
-\noindent\textbf{\textit{Expressive Flow Field Exploration}}\\
-\textbf{Jun Tao}
+\noindent\textbf{\textit{Vector Field Techniques for Large-Scale Data}}\\
+\textbf{Christoph Garth}
 \paragraph{Abstract}
-A major task of visualizing steady flow fields is to allow users perceive the flow patterns and locate features of interest. Traditional flow visualization approaches, such as \emph{seed placement} and \emph{streamline selection}, generate an appropriate set of streamlines to describe steady flow fields. However, only limited capabilities are provided to meet specific needs from different users, especially at the streamline segment level. In this talk, I will start from a unified framework that automatically selects best streamlines to display and selects best viewpoint to observe them simultaneously. Then, three interactive techniques will be presented to demonstrate the benefit of interactive exploration, including a graph-based technique to capture the relations among streamlines and spatial regions, a deformation framework to achieve focus+context visualization, and a vocabulary approach to query flow patterns in a textual manner.
+Large-scale vector fields as arising from modern scientific computing and experimental workflows pose substantial and significant challenges to visualization. While there is a rich body of work addressing flow visualization, many methods are unable to scale to modern data set sizes both algorithmically and with respect to the complexity of the obtained results. In his talk, he will discuss the application of flow visualization techniques to large-scale, time-varying vector fields, and report on recent research results in this area. Particular attention will be given to parallel algorithms and in-situ techniques that eschew the requirement to store full-fidelity data to achieve accurate visualization. On the latter topic, the talk will discuss several methods to flexibly analyse vector field data at reduced resolution. To conclude, recent results for large-scale vector field ensembles will be discussed.
 
-\paragraph{Contribution}
-This part of the tutorial focuses on the exploration of steady flow fields. Through the presented techniques, two trends of flow visualization are shown. First, user interactions are highly involved. This allows users to specify, identify and observe their interested patterns/features in a more desired way. Second, features are captured at both coarser and finer levels. Unlike most of the early works that treat each streamline as an entity, more local features residing on segments of streamlines can be compared, matched and discovered as well.
+\addverticalspace
+
+\noindent\textbf{\textit{Theories and Scalability Issues in Ensemble and Uncertain Flow Visualization}}\\
+\textbf{Hanqi Guo}
+\paragraph{Abstract}
+This talk will cover the topics on theories and scalability issues in ensemble and uncertain flow visualization. On one hand, we must redefine features in flow visualization, such as FTLE and LCS, for ensemble and uncertain flows. On the other hand, we have to scale up for the ensemble and uncertain flow analysis with supercomputers. We are going to review the literatures on this topic and present our recent studies.
 
 \section*{TUTORIAL NOTES}
 The tutorial notes will consist of the description of the tutorial, copies of the slides for each talk, and an extensive bibliography including specific references used in the tutorial as well as a general selection of relevant references.
@@ -258,8 +269,21 @@ The background of each speaker is listed in alphabetical order.
 
 \addverticalspace
 
+\noindent \textbf{Christoph Garth}\\
+\emph{University of Kaiserslautern}\\
+\href{mailto:garth@cs.uni-kl.de}{garth@cs.uni-kl.de}\\
+\url{http://vis.uni-kl.de/people/garth/}
+
+\addverticalspace
+
+Christoph Garth is an assistant professor in the Computer Science Dept. at the University of Kaiserslautern, Germany. His main research interests include visualization and analysis of large-scale, multi-modal data as well as time-varying vector field visualization, with an emphasis on topology-based methods and in situ techniques.
+
+\printbibliography[title={Relevant Publications},category=Garth]
+
 \noindent \textbf{Hanqi Guo}\\
-\emph{Argonne National Laboratory}
+\emph{Argonne National Laboratory}\\
+\href{mailto:hguo@anl.gov}{hguo@anl.gov}\\
+\url{http://www.mcs.anl.gov/~hguo/}
 
 \addverticalspace
 
@@ -268,7 +292,9 @@ Hanqi Guo is a Postdoctral Appointee in the Mathematics and Computer Science Div
 \printbibliography[title={Relevant Publications},category=Guo]
 
 \noindent \textbf{Jun Tao}\\
-\emph{University of Notre Dame}
+\emph{University of Notre Dame}\\
+\href{mailto:jtao1@nd.edu}{jtao1@nd.edu}\\
+\url{http://www.nd.edu/~jtao1/}
 
 \addverticalspace
 
@@ -277,7 +303,9 @@ Jun Tao is currently a postdoctoral researcher at University of Notre Dame. He r
 \printbibliography[title={Relevant Publications},category=Tao]
 
 \noindent \textbf{Bei Wang}\\
-\emph{University of Utah}
+\emph{University of Utah}\\
+\href{mailto:beiwang@sci.utah.edu}{beiwang@sci.utah.edu}\\
+\url{http://www.sci.utah.edu/~beiwang/}
 
 \addverticalspace
 Bei Wang is an assistant professor at the School of Computing and the Scientific Computing and Imaging Institute, University of Utah. Her main research interests lie in the theoretical, algorithmic, and application aspects of data analysis and data visualization, with a focus on topological techniques. She is also interested in computational biology and bioinformatics, machine learning and data mining. She is a member of ACM and IEEE.
@@ -286,7 +314,9 @@ Bei Wang is an assistant professor at the School of Computing and the Scientific
 \printbibliography[title={Relevant Publications},category=Wang]
 
 \noindent \textbf{Tino Weinkauf}\\
-\emph{KTH Stockholm}
+\emph{KTH Stockholm}\\
+\href{mailto:weinkauf@kth.se}{weinkauf@kth.se}\\
+\url{http://www.csc.kth.se/~weinkauf/}
 
 \addverticalspace
 Tino Weinkauf received his diploma in computer science from the University of Rostock in 2000. From 2001, he worked on feature-based flow visualization and topological data analysis at Zuse Institute Berlin. He received his Ph.D. in computer science from the University of Magdeburg in 2008. In 2009 and 2010, he worked as a postdoc and adjunct assistant professor at the Courant Institute of Mathematical Sciences at New York University. He started his own group in 2011 on Feature-Based Data Analysis in the Max Planck Center for Visual Computing and Communication, Saarbrücken. Since 2015, he holds the Chair of Visualization at KTH Stockholm. His current research interests focus on flow analysis, discrete topological methods, and information visualization.
